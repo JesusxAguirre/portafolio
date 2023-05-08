@@ -26,8 +26,11 @@
   <link href="{{url_for('static', filename='vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
   <link href="{{url_for('static', filename='vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
+
+
   <!-- Template Main CSS File -->
   <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/adminlte.css')}}" rel="stylesheet">
 
 </head>
 
@@ -515,16 +518,17 @@
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="bi bi-bar-chart"></i></div>
             <h4 class="title"><a href="">
-              Application deployment on AWS </a></h4>
+                Application deployment on AWS </a></h4>
             <p class="description">I can help you to deploy you aplicaction if you have a domain name</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="bi bi-binoculars"></i></div>
             <h4 class="title"><a href="">API development</a></h4>
-            <p class="description">I can create APIs that allow your information to be easily consumed by your front-end application.</p>
+            <p class="description">I can create APIs that allow your information to be easily consumed by your front-end
+              application.</p>
           </div>
-       
-        
+
+
         </div>
 
       </div>
@@ -538,7 +542,8 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>In this space, I'll provide you with my contact information, as well as a form through which you can send me an email if you wish.</p>
+          <p>In this space, I'll provide you with my contact information, as well as a form through which you can send
+            me an email if you wish.</p>
         </div>
 
         <div class="row" data-aos="fade-in">
@@ -569,30 +574,38 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="/" id="formulario" method="post" role="form" class="php-email-form">
               <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
+                <div class="" id="grupo__name">
+                  <div class="form-group col-md-6">
+                    <label for="name">Your Name</label>
+                    <input type="text" name="name" class="form-control" id="name" required>
+                  </div>
+                  <p class="text-danger d-none">Este campo debe tener minimo 5 letras</p>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
+                <div class="" id="grupo__email">
+                  <div class="form-group col-md-6">
+                    <label for="name">Your Email</label>
+                    <input type="email" class="form-control" name="correo" id="email" required>
+                  </div>
+                  <p class="text-danger d-none">Debe tener formato de email.</p>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
+              <div class="" id="grupo__asunto">
+                <div class="form-group">
+                  <label for="name">Subject</label>
+                  <input type="text" class="form-control" name="asunto" id="asunto" required>
+                </div>
+                <p class="text-danger d-none">Este campo debe tener minimo 5 letras</p>
               </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+              <div class="" id="mensaje">
+                <div class="form-group">
+                  <label for="name">Message</label>
+                  <textarea class="form-control" name="mensaje" rows="10" required></textarea>
+                </div>
+                <p class="text-danger d-none"> Este campo no puede estar vacio y debe tener minimo 10 letras </p>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
+
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
           </div>
@@ -628,7 +641,7 @@
   <script src="{{url_for('static', filename='vendor/swiper/swiper-bundle.min.js')}}"></script>
   <script src="{{url_for('static', filename='vendor/typed//typed.min.js')}}"></script>
   <script src="{{url_for('static', filename='vendor/waypoints/noframework.waypoints.js')}}"></script>
-  <script src="{{url_for('static', filename='vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{url_for('static', filename='js/validacion.js')}}"></script>
 
   <!-- Template Main JS File -->
   <script src="{{url_for('static', filename= 'js/main.js')}}"></script>
