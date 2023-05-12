@@ -30,7 +30,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
-  <link href="{{url_for('static', filename='css/adminlte.css')}}" rel="stylesheet">
+
 
 </head>
 
@@ -574,34 +574,34 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="/" id="formulario" method="post" role="form" class="php-email-form">
+            <form action="/" id="formulario" method="post" role="form" class="php-email-form" novalidate>
               <div class="row">
-                <div class="" id="grupo__name">
+                <div id="grupo__name">
                   <div class="form-group col-md-6">
                     <label for="name">Your Name</label>
-                    <input type="text" name="name" class="form-control" id="name" required>
+                    <input maxlength="12" type="text" name="name" class="form-control" id="name" required>
                   </div>
                   <p class="text-danger d-none">Este campo debe tener minimo 5 letras</p>
                 </div>
-                <div class="" id="grupo__email">
+                <div id="grupo__email">
                   <div class="form-group col-md-6">
                     <label for="name">Your Email</label>
-                    <input type="email" class="form-control" name="correo" id="email" required>
+                    <input maxlength="70" type="email" class="form-control" name="email" id="email" required>
                   </div>
                   <p class="text-danger d-none">Debe tener formato de email.</p>
                 </div>
               </div>
-              <div class="" id="grupo__asunto">
+              <div id="grupo__asunto">
                 <div class="form-group">
                   <label for="name">Subject</label>
-                  <input type="text" class="form-control" name="asunto" id="asunto" required>
+                  <input maxlength="12" type="text" class="form-control" name="asunto" id="asunto" required>
                 </div>
                 <p class="text-danger d-none">Este campo debe tener minimo 5 letras</p>
               </div>
-              <div class="" id="mensaje">
+              <div id="grupo__mensaje">
                 <div class="form-group">
                   <label for="name">Message</label>
-                  <textarea class="form-control" name="mensaje" rows="10" required></textarea>
+                  <textarea maxlength="200" class="form-control" name="mensaje" rows="10" required></textarea>
                 </div>
                 <p class="text-danger d-none"> Este campo no puede estar vacio y debe tener minimo 10 letras </p>
               </div>
@@ -624,7 +624,7 @@
         &copy; Copyright <strong><span>Jesus Aguirre 2023</span></strong>
       </div>
       <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">Jesus Aguirre</a>
+        Designed by <a href="https://github.com/JesusxAguirre">Jesus Aguirre</a>
       </div>
     </div>
   </footer><!-- End  Footer -->
@@ -641,6 +641,11 @@
   <script src="{{url_for('static', filename='vendor/swiper/swiper-bundle.min.js')}}"></script>
   <script src="{{url_for('static', filename='vendor/typed//typed.min.js')}}"></script>
   <script src="{{url_for('static', filename='vendor/waypoints/noframework.waypoints.js')}}"></script>
+  
+  
+
+  <script src="{{url_for('static', filename='js/jquery-3.6.0.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/sweetalert2.js')}}"></script>
   <script src="{{url_for('static', filename='js/validacion.js')}}"></script>
 
   <!-- Template Main JS File -->
